@@ -13,4 +13,4 @@ The fate of your leadership is in your hands. Choose wisely.
 
 **How long can you Stay in Power?**
 
-For information on gameplay and game details, [see](/docs/README.md).
+For information on gameplay and game details, [see](/docs/index.md).
