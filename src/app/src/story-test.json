@@ -9,6 +9,7 @@
             "id": 1,
             "name": "Test Component",
             "detail": "This is test component",
+            "image": "url",
             "stats": {
                 "charisma": 3,
                 "leadership": 1
