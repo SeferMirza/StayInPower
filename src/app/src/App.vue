@@ -1,7 +1,14 @@
 <script setup>
-import cardsData from '@/story-test.json';
+import Data from '@/story-test.json';
+import { ref } from 'vue';
+import ChoiceCard from './components/ChoiceCard.vue';
 
-console.log(cardsData);
+const currentScene = ref(Data.story);
+
+console.log(currentScene.value);
+function Hit(id) {
+  console.log(id)
+}
 </script>
 
 <template>
@@ -13,9 +20,17 @@ console.log(cardsData);
 
   <div class="content-block">
     <div class="cards">
-      cards
+      <ChoiceCard
+        v-for="card in currentScene"
+        v-bind:key="card.id"
+        :name="Data.components[card.id].name"
+        :image="Data.components[card.id].image"
+        :detail="Data.components[card.id].detail"
+        :stats="Data.components[card.id].stats"
+        v-on:select="Hit(card.id)"
+      />
     </div>
-    <div>
+    <div class="events">
       right side events
     </div>
   </div>
@@ -33,9 +48,16 @@ console.log(cardsData);
 .cards {
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 header {
   width: 100%;
+  background-color: aqua;
+}
+
+.events {
+  width: 15%;
 }
 </style>
