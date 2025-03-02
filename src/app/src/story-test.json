@@ -1,0 +1,46 @@
+{
+    "story": [
+        {
+            "id": 1,
+            "next": [
+                {
+                    "id": 2
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "next": []
+        }
+    ],
+    "components": {
+        "1": {
+            "id": 1,
+            "name": "Test Component",
+            "detail": "This is test component",
+            "image": "basic.jpg",
+            "stats": {
+                "charisma": 3,
+                "leadership": 1
+            }
+        },
+        "2": {
+            "id": 2,
+            "name": "Test Component 2",
+            "detail": "This is test component 2",
+            "image": "basic.jpg",
+            "stats": {
+                "charisma": -3,
+                "leadership": 2
+            }
+        }
+    },
+    "events": [
+        {
+            "id": 3,
+            "firstAppear": 2,
+            "disappear": 7,
+            "perWeek": 1
+        }
+    ]
+}

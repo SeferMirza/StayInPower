@@ -1,0 +1,21 @@
+{
+    "story": [
+        {
+            "id": 1,
+            "next": []
+        }
+    ],
+    "components": [
+        {
+            "id": 1
+        }
+    ],
+    "events": [
+        {
+            "id": 3,
+            "firstAppear": 2,
+            "disappear": 7,
+            "perWeek": 1
+        }
+    ]
+}
