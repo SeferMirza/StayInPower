@@ -5,9 +5,8 @@ import ChoiceCard from './components/ChoiceCard.vue';
 
 const currentScene = ref(Data.story);
 
-console.log(currentScene.value);
-function Hit(id) {
-  console.log(id)
+function hit(id) {
+  console.log(id);
 }
 </script>
 
@@ -27,7 +26,7 @@ function Hit(id) {
         :image="Data.components[card.id].image"
         :detail="Data.components[card.id].detail"
         :stats="Data.components[card.id].stats"
-        v-on:select="Hit(card.id)"
+        @click="hit(card.id)"
       />
     </div>
     <div class="events">
@@ -47,7 +46,8 @@ function Hit(id) {
 
 .cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   height: 100%;
 }

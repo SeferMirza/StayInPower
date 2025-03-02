@@ -18,10 +18,14 @@ defineProps({
     <div class="detail">{{ detail }}</div>
     <div class="stats">
       <div v-if="stats.charisma" class="stat">
-        <span class="stat-value">{{ stats.charisma }}</span>
+        <font-awesome-icon icon="fa-solid fa-star" />
+        <font-awesome-icon v-if="stats.charisma > 0" icon="fa-solid fa-up-long" />
+        <font-awesome-icon v-else-if="stats.charisma < 0" icon="fa-solid fa-down-long" />
       </div>
       <div v-if="stats.leadership" class="stat">
-        <span class="stat-value">{{ stats.leadership }}</span>
+        <font-awesome-icon icon="fa-solid fa-person-military-pointing" />
+        <font-awesome-icon v-if="stats.leadership > 0" icon="fa-solid fa-up-long" />
+        <font-awesome-icon v-else-if="stats.leadership < 0" icon="fa-solid fa-down-long" />
       </div>
     </div>
   </div>
@@ -53,23 +57,23 @@ defineProps({
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: bold;
   text-align: center;
 }
 
 .detail {
   height: 30%;
-  font-size: 16px;
+  font-size: 22px;
   text-align: center;
   padding: 10px;
 }
 
 .stats {
-  height: 20%;
+  height: 5%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   padding: 10px;
   border-radius: 0 0 10px 10px;
 }
@@ -77,6 +81,6 @@ defineProps({
 .stat {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 20px;
 }
 </style>
