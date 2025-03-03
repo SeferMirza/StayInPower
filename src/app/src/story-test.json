@@ -19,9 +19,9 @@
             "name": "Test Component",
             "detail": "This is test component",
             "image": "basic.jpg",
-            "stats": {
-                "charisma": 3,
-                "leadership": 1
+            "sides": {
+                "green": 3,
+                "conservative": 1
             }
         },
         "2": {
@@ -29,9 +29,9 @@
             "name": "Test Component 2",
             "detail": "This is test component 2",
             "image": "basic.jpg",
-            "stats": {
-                "charisma": -3,
-                "leadership": 2
+            "sides": {
+                "green": -3,
+                "liberal": 2
             }
         }
     },
@@ -42,5 +42,32 @@
             "disappear": 7,
             "perWeek": 1
         }
-    ]
+    ],
+    "sides": {
+        "green": {
+            "acceptance": 50,
+            "name": "Green",
+            "icon": "fa-leaf"
+        },
+        "conservative": {
+            "acceptance": 50,
+            "name": "Conservative",
+            "icon": "fa-shield-alt"
+        },
+        "liberal": {
+            "acceptance": 50,
+            "name": "Liberal",
+            "icon": "fa-dove"
+        },
+        "nationalist": {
+            "acceptance": 50,
+            "name": "Nationalist",
+            "icon": "fa-flag"
+        },
+        "socialist": {
+            "acceptance": 50,
+            "name": "Socialist",
+            "icon": "fa-fist-raised"
+        }
+    }
 }
