@@ -1,12 +1,15 @@
 <script setup>
 import { defineProps } from 'vue';
 
-defineProps({
+const props = defineProps({
   name: String,
   image: String,
   detail: String,
-  stats: Object, // Örn: "stats": { "charisma": 3, "leadership": 1 }
+  sides: Object,
+  sideIcons: [Object],
 });
+
+const keySides = Object.keys(props.sides);
 </script>
 
 <template>
@@ -16,16 +19,11 @@ defineProps({
   >
     <div class="name">{{ name }}</div>
     <div class="detail">{{ detail }}</div>
-    <div class="stats">
-      <div v-if="stats.charisma" class="stat">
-        <font-awesome-icon icon="fa-solid fa-star" />
-        <font-awesome-icon v-if="stats.charisma > 0" icon="fa-solid fa-up-long" />
-        <font-awesome-icon v-else-if="stats.charisma < 0" icon="fa-solid fa-down-long" />
-      </div>
-      <div v-if="stats.leadership" class="stat">
-        <font-awesome-icon icon="fa-solid fa-person-military-pointing" />
-        <font-awesome-icon v-if="stats.leadership > 0" icon="fa-solid fa-up-long" />
-        <font-awesome-icon v-else-if="stats.leadership < 0" icon="fa-solid fa-down-long" />
+    <div class="sides">
+      <div v-for="side in keySides" :key="side" class="side">
+        <font-awesome-icon :icon="`fa-solid ${sideIcons[side]}`" />
+        <font-awesome-icon v-if="sides[side] > 0" icon="fa-solid fa-up-long" />
+        <font-awesome-icon v-else-if="sides[side] < 0" icon="fa-solid fa-down-long" />
       </div>
     </div>
   </div>
@@ -42,7 +40,7 @@ defineProps({
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  color: rgb(22, 22, 22);
   cursor: pointer;
   border-radius: 10px;
   position: relative;
@@ -69,7 +67,7 @@ defineProps({
   padding: 10px;
 }
 
-.stats {
+.sides {
   height: 5%;
   display: flex;
   flex-direction: row;
@@ -78,7 +76,7 @@ defineProps({
   border-radius: 0 0 10px 10px;
 }
 
-.stat {
+.side {
   display: flex;
   justify-content: space-between;
   font-size: 20px;

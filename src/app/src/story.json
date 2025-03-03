@@ -7,7 +7,14 @@
     ],
     "components": [
         {
-            "id": 1
+            "id": 1,
+            "name": "Test Component 2",
+            "detail": "This is test component 2",
+            "image": "basic.jpg",
+            "sides": {
+                "green": -3,
+                "conservative": 2
+            }
         }
     ],
     "events": [
@@ -17,5 +24,27 @@
             "disappear": 7,
             "perWeek": 1
         }
-    ]
+    ],
+    "sides": {
+        "green": {
+            "acceptance": 50,
+            "icon": "fa-leaf"
+        },
+        "conservative": {
+            "acceptance": 50,
+            "icon": "fa-shield-alt"
+        },
+        "liberal": {
+            "acceptance": 50,
+            "icon": "fa-dove"
+        },
+        "nationalist": {
+            "acceptance": 50,
+            "icon": "fa-flag"
+        },
+        "socialist": {
+            "acceptance": 50,
+            "icon": "fa-fist-raised"
+        }
+    }
 }
