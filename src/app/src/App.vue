@@ -43,10 +43,11 @@ function hit(id) {
       <ChoiceCard
         v-for="card in currentScene"
         v-bind:key="card.id"
-        :name="Data.components[card.id].name"
-        :image="Data.components[card.id].image"
-        :detail="Data.components[card.id].detail"
-        :sides="Data.components[card.id].sides"
+        :name="card.name ?? Data.components[card.id].name"
+        :image="card.image ?? Data.components[card.id].image"
+        :detail="card.detail ?? Data.components[card.id].detail"
+        :sides="card.sides ?? Data.components[card.id].sides"
+        :type="card.type ?? Data.components[card.id].type"
         :sideIcons
         @click="hit(card.id)"
       />

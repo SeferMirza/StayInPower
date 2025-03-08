@@ -11,6 +11,7 @@
             "name": "Test Component 2",
             "detail": "This is test component 2",
             "image": "basic.jpg",
+            "type": "white",
             "sides": {
                 "green": -3,
                 "conservative": 2

@@ -3,6 +3,7 @@ import { defineProps } from 'vue';
 
 const props = defineProps({
   name: String,
+  type: String,
   image: String,
   detail: String,
   sides: Object,
@@ -15,7 +16,7 @@ const keySides = Object.keys(props.sides);
 <template>
   <div
     class="card"
-    :style="{ backgroundImage: `url(${image})` }"
+    :class="type"
   >
     <div class="name">{{ name }}</div>
     <div class="detail">{{ detail }}</div>
@@ -40,10 +41,30 @@ const keySides = Object.keys(props.sides);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  color: rgb(22, 22, 22);
   cursor: pointer;
   border-radius: 10px;
   position: relative;
+}
+
+.white {
+  background-color: rgb(214, 214, 214);
+  color: rgb(22, 22, 22);
+}
+
+.blue {
+  background-color: rgb(0, 0, 255);
+}
+
+.purple {
+  background-color: rgb(128, 0, 128);
+}
+
+.yellow {
+  background-color: rgb(255, 255, 0);
+}
+
+.red {
+  background-color: rgb(255, 0, 0);
 }
 
 .name {
