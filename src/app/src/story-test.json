@@ -11,14 +11,51 @@
         {
             "id": 2,
             "next": []
+        },
+        {
+            "id": 3,
+            "name": "Short name here...",
+            "detail": "Red card. Long detail here...",
+            "image": "basic.jpg",
+            "type": "red",
+            "sides": {
+                "liberal": 2
+            },
+            "next": []
+        },
+        {
+            "id": 4,
+            "name": "Short name here...",
+            "detail": "Purple Diplomatic card. Long detail here...",
+            "image": "basic.jpg",
+            "type": "purple",
+            "sides": {
+                "nationalist": 2,
+                "green": 1,
+                "conservative": 1,
+                "liberal": -1
+            },
+            "next": []
+        },
+        {
+            "id": 5,
+            "name": "Short name here...",
+            "detail": "Special Yellow card. Long detail here...",
+            "image": "basic.jpg",
+            "type": "yellow",
+            "sides": {
+                "socialist": 2
+            },
+            "next": []
         }
     ],
     "components": {
         "1": {
             "id": 1,
-            "name": "Test Component",
-            "detail": "This is test component",
+            "name": "Short name here...",
+            "detail": "Standard white card. Long detail here...",
             "image": "basic.jpg",
+            "type": "white",
             "sides": {
                 "green": 3,
                 "conservative": 1
@@ -26,9 +63,10 @@
         },
         "2": {
             "id": 2,
-            "name": "Test Component 2",
-            "detail": "This is test component 2",
+            "name": "Short name here...",
+            "detail": "Event card. Long detail here...",
             "image": "basic.jpg",
+            "type": "blue",
             "sides": {
                 "green": -3,
                 "liberal": 2
