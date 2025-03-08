@@ -38,3 +38,27 @@ cards.
 ![image here]
 
 ## Cards
+
+### Red Card
+
+This type of card will only be used in events or events like events. It will
+represent events with a national impact, such as a coup or natural disasters. No
+other card type should be used with this card.
+
+### Blue Card
+
+Card type to represent event starts only.
+
+### Yellow Card
+
+This card type represents one-time special events. If the card is selected, it
+brings some privileges, items, etc. to the user.
+
+### Purple Card
+
+This card type is used for diplomatic transactions. For example, new
+legislation, agreements with other countries.
+
+### White Card
+
+Default card type for standard situations.
