@@ -36,3 +36,5 @@ Also, the side that the decision will affect is shown at the bottom of the
 cards.
 
 ![image here]
+
+## Cards
