@@ -4,6 +4,7 @@ import { ref } from 'vue';
 import ChoiceCard from './components/ChoiceCard.vue';
 
 const currentScene = ref(Data.story);
+const sides = ref(Data.sides);
 const hoveredSide = ref(null);
 const sideIcons = {};
 
@@ -11,8 +12,13 @@ Object.keys(Data.sides).forEach(side => {
   sideIcons[side] = Data.sides[side].icon;
 });
 
-function hit(id) {
-  console.log(id);
+function select(story) {
+  const _sides = story.sides ?? Data.components[story.id].sides;
+  currentScene.value = story.next;
+
+  Object.keys(_sides).forEach(side => {
+    sides.value[side].acceptance += _sides[side];
+  });
 }
 </script>
 
@@ -20,7 +26,7 @@ function hit(id) {
   <header>
     <div class="sides">
       <div
-        v-for="{icon, name, acceptance} in Data.sides"
+        v-for="{icon, name, acceptance} in sides"
         class="side"
         :key="name"
         :side-name="name"
@@ -49,7 +55,7 @@ function hit(id) {
         :sides="card.sides ?? Data.components[card.id].sides"
         :type="card.type ?? Data.components[card.id].type"
         :sideIcons
-        @click="hit(card.id)"
+        @click="select(card)"
       />
     </div>
     <div class="events">

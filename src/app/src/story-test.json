@@ -4,7 +4,23 @@
             "id": 1,
             "next": [
                 {
-                    "id": 2
+                    "id": 2,
+                    "next": [
+                        {
+                            "id": 3,
+                            "next": [
+                                {
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 3
+                },
+                {
+                    "id": 1
                 }
             ]
         },
@@ -57,7 +73,7 @@
             "image": "basic.jpg",
             "type": "white",
             "sides": {
-                "green": 3,
+                "green": 20,
                 "conservative": 1
             }
         },
@@ -71,6 +87,17 @@
                 "green": -3,
                 "liberal": 2
             }
+        },
+        "3": {
+            "id": 3,
+            "name": "Short name here...",
+            "detail": "Red card. Long detail here...",
+            "image": "basic.jpg",
+            "type": "red",
+            "sides": {
+                "liberal": 2
+            },
+            "next": []
         }
     },
     "events": [
